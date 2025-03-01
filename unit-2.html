@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIT 2 - Advanced HTML</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/utility.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        html {
+            scroll-padding-top: 64px;
+        }
+
+        body {
+            background-color: #1b093f;
+            color: white;
+        }
+
+        hr {
+            width: 100%;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/utility.css">
+    <style>
+        @font-face {
+            font-family: myFont;
+            src: url("fonts/Oxlaide.otf") format("opentype");
+        }
+
+        .navbar {
+            color: white;
+            font-family: "Poppins", sans-serif;
+            position: sticky;
+            top: 0;
+            height: 65px;
+            background-color: rgba(255, 255, 255, 0.062);
+            backdrop-filter: blur(10px);
+            padding: 0 100px;
+        }
+
+        .logo {
+            cursor: pointer;
+            font-size: 40px;
+            font-family: 'myFont', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            height: 55px;
+            background-color: #33A9DF;
+            padding: 0px 2px;
+            border-radius: 10px;
+        }
+
+        input {
+            position: relative;
+            border-radius: 8px;
+            padding: 0 5px 0 35px;
+            height: 40px;
+            width: 25vw;
+            font-size: 20px;
+            font-weight: 500;
+            color: #1A4261;
+            background-image: url("images/search.svg");
+            background-repeat: no-repeat;
+            background-position: 7px center;
+            border: none;
+        }
+
+        input:focus {
+            outline: none;
+            border: 2px solid #33A9DF;
+        }
+
+        button {
+            color: white;
+            cursor: pointer;
+            outline: none;
+            border: none;
+            background-color: transparent;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        button:hover {
+            color: #33A9DF;
+        }
+
+        .login-signup {
+            gap: 10px;
+        }
+
+        .log-in {
+            background-color: #38bdf833;
+            color: #33A9DF;
+            padding: 8px 10px;
+            border-radius: 8px;
+        }
+
+        .log-in:hover {
+            background-color: #1A4261;
+            transition: all 0.3s ease-in-out;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        @media screen and (max-width: 900px) {
+            .navbar {
+                padding: 0 30px;
+            }
+
+            .logo {
+                font-size: 30px;
+            }
+
+            .logo img {
+                height: 45px;
+                padding: 0px 1.5px;
+            }
+
+            input {
+                padding: 0 5px 0 30px;
+                height: 32px;
+                width: 90px;
+                font-size: 15px;
+                background-size: 20px;
+            }
+
+            button {
+                font-size: 17px;
+            }
+
+            .log-in {
+                padding: 6px 7px;
+                border-radius: 8px;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            .navbar {
+                height: 55px;
+                padding: 0 20px;
+            }
+
+            .logo {
+                font-size: 25px;
+            }
+
+            .logo img {
+                height: 35px;
+                padding: 0px 1px;
+            }
+
+            input {
+                width: 55px;
+                height: 28px;
+            }
+
+            button {
+                font-size: 13px;
+            }
+
+            .log-in {
+                padding: 4px 5px;
+            }
+
+            .login-signup {
+                gap: 3px;
+            }
+        }
+
+        @media screen and (max-width: 375px) {
+            .navbar {
+                padding: 0 10px;
+            }
+
+            .logo p {
+                line-height: 20px;
+            }
+
+            button {
+                font-size: 11px;
+            }
+
+            input {
+                width: 48px;
+                padding: 0 2px 0 20px;
+                background-position: 2px center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar flex item-center space-between">
+        <a href="/index.html">
+            <div class="logo">
+                <img src="images/logo.svg" alt="Logo img">
+                <p>Study Nest</p>
+            </div>
+        </a>
+        <div class="searchbox">
+            <input type="text" placeholder="Search...">
+        </div>
+        <div class="login-signup flex center">
+            <button class="sign-up">Sign up</button>
+            <button class="log-in">Log in</button>
+        </div>
+    </div>
+</body>
+
+</html>
+    <div class="container">
+        <div class="left">
+            <h3 style="padding: 10px 30px 0 30px;">UNIT 2</h3>
+            <ul class="unit-items ">
+                <a href="#1">
+                    <li class="active">Tables</li>
+                </a>
+                <a href="#2">
+                    <li>Frames and floating</li>
+                </a>
+                <a href="#3">
+                    <li>Developing forms</li>
+                </a>
+            </ul>
+        </div>
+        <div class="right padding-20">
+            <div id="1" class="topics">
+                <h2>HTML Tables</h2>
+                <hr>
+                <p>HTML tables are used to organize and display data in a tabular format consisting of rows and columns.
+                    Here's a breakdown of the key elements of an HTML table:</p>
+                <br>
+                <strong>Table Elements</strong>>
+                <ol class="padding-20">
+                    <li>
+                        <i>&lt;table</i> : Defines the table.
+                    </li>
+                    <li>
+                        <i>&lt;tr</i> : Defines a table row.
+                    </li>
+                    <li>
+                        <i>&lt;th</i> : Defines a table header cell (bold and centered by default).
+                    </li>
+                    <li>
+                        <i>&lt;td</i> : Defines a table data cell.
+                    </li>
+                </ol>
+                <strong>Example: A Basic HTML Table</strong><br>
+                <i>
+                    &lt;style&gt;<br>
+                    &emsp;table {<br>
+                    &emsp;&emsp;width: 50%;<br>
+                    &emsp;&emsp;border-collapse: collapse;<br>
+                    &emsp;&emsp;margin: 20px auto;<br>
+                    &emsp;}<br>
+                    &emsp;th, td {<br>
+                    &emsp;&emsp;border: 1px solid #ccc;<br>
+                    &emsp;&emsp;padding: 10px;<br>
+                    &emsp;&emsp;text-align: center;<br>
+                    &emsp;&emsp;color: black;<br>
+                    &emsp;}<br>
+                    &emsp;th {<br>
+                    &emsp;&emsp;background-color: #f4f4f4;<br>
+                    &emsp;}<br>
+                    &emsp;tr:nth-child(even) {<br>
+                    &emsp;&emsp;background-color: #f9f9f9;<br>
+                    &emsp;}<br>
+                    &emsp;tr:nth-child(odd) {<br>
+                    &emsp;&emsp;background-color: green;<br>
+                    &emsp;}<br>
+                    &lt;/style&gt;<br>
+                    &lt;body&gt;<br>
+                    &emsp;&lt;h1 style="text-align: center;"&gt;HTML Table Example&lt;/h1&gt;<br>
+                    &emsp;&lt;table&gt;<br>
+                    &emsp;&emsp;&lt;tr&gt;<br>
+                    &emsp;&emsp;&emsp;&lt;th&gt;Item&lt;/th&gt;<br>
+                    &emsp;&emsp;&emsp;&lt;th&gt;Price&lt;/th&gt;<br>
+                    &emsp;&emsp;&emsp;&lt;th&gt;Quantity&lt;/th&gt;<br>
+                    &emsp;&emsp;&lt;/tr&gt;<br>
+                    &emsp;&emsp;&lt;tr&gt;<br>
+                    &emsp;&emsp;&emsp;&lt;td&gt;Apples&lt;/td&gt;<br>
+                    &emsp;&emsp;&emsp;&lt;td&gt;$1.00&lt;/td&gt;<br>
+                    &emsp;&emsp;&emsp;&lt;td&gt;10&lt;/td&gt;<br>
+                    &emsp;&emsp;&lt;/tr&gt;<br>
+                    &emsp;&emsp;&lt;tr&gt;<br>
+                    &emsp;&emsp;&emsp;&lt;td&gt;Bananas&lt;/td&gt;<br>
+                    &emsp;&emsp;&emsp;&lt;td&gt;$0.50&lt;/td&gt;<br>
+                    &emsp;&emsp;&emsp;&lt;td&gt;20&lt;/td&gt;<br>
+                    &emsp;&emsp;&lt;/tr&gt;<br>
+                    &emsp;&emsp;&lt;tr&gt;<br>
+                    &emsp;&emsp;&emsp;&lt;td&gt;Cherries&lt;/td&gt;<br>
+                    &emsp;&emsp;&emsp;&lt;td&gt;$2.00&lt;/td&gt;<br>
+                    &emsp;&emsp;&emsp;&lt;td&gt;15&lt;/td&gt;<br>
+                    &emsp;&emsp;&lt;/tr&gt;<br>
+                    &emsp;&lt;/table&gt;<br>
+                    &lt;/body&gt;<br>
+                </i><br>
+                <p>Output : </p>
+                <style>
+                    table {
+                        width: 50%;
+                        border-collapse: collapse;
+                        margin: 20px auto;
+                    }
+
+                    th,
+                    td {
+                        border: 1px solid #ccc;
+                        padding: 10px;
+                        text-align: center;
+                        color: black;
+                    }
+
+                    th {
+                        background-color: #f4f4f4;
+                    }
+
+                    tr:nth-child(even) {
+                        background-color: #f9f9f9;
+                    }
+
+                    tr:nth-child(odd) {
+                        background-color: green;
+                    }
+                </style>
+                <h1 style="text-align: center;">HTML Table Example</h1>
+                <table>
+                    <tr>
+                        <th>Item</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                    </tr>
+                    <tr>
+                        <td>Apples</td>
+                        <td>$1.00</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>Bananas</td>
+                        <td>$0.50</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>Cherries</td>
+                        <td>$2.00</td>
+                        <td>15</td>
+                    </tr>
+                </table>
+                <br>
+                <strong>Features in the Example:</strong>
+                <ul>
+                    <li>
+                        <i>border-collapse</i> : Ensures there’s no gap between cell borders.
+                    </li>
+                    <li>
+                        <b>Striped Rows : </b><i>nth-child(even)</i> creates alternate row shading for better
+                        readability.
+                    </li>
+                    <li>
+                        <b>Header Styling</b> : Different background for the &lt;th&gt; for distinction.
+                    </li>
+                </ul>
+                <strong>Advanced Table Features</strong>
+                <ul>
+                    <li>
+                        <b>Merged Cells</b> : Use colspan or rowspan to merge cells.
+                        <br>&emsp;<i>&lt;td colspan="2"&gt;Merged Cell&lt;/td&gt;</i>
+                    </li>
+                    <li>
+                        <b>Responsive Tables</b> : Use CSS for scrollable tables or media queries to adapt to different
+                        screen sizes.
+                    </li>
+                </ul>
+                <hr>
+            </div>
+            <div id="2" class="topics">
+                <h2>HTML Frames and floating</h2>
+                <hr>
+                <strong>HTML Frames</strong><br>
+                <p>Frames were once used to divide a webpage into multiple sections, where each section could display a
+                    different HTML document. However, frames are now considered outdated and are not recommended in
+                    modern web development. The &lt;frameset&gt; and &lt;frame&gt; tags were used to create frames.</p>
+                <br>
+                <p>Example of Frames (Outdated) :</p>
+                <i>
+                    &emsp;&lt;frameset cols="50%,50%"&gt;<br>
+                    &emsp;&emsp;&lt;frame src="page1.html"&gt;<br>
+                    &emsp;&emsp;&lt;frame src="page2.html"&gt;<br>
+                    &emsp;&lt;/frameset>&gt;<br>
+                </i><br>
+                <p>Key Points :</p>
+                <ul>
+                    <li>
+                        <i>&lt;frameset&gt;</i> : Replaces the <i>&lt;body&gt;</i> tag to define frame layout.
+                    </li>
+                    <li>
+                        <i>&lt;frame&gt;</i> : Defines each individual frame.
+                    </li>
+                    <li>
+                        Drawbacks :
+                        <ul>
+                            <li>Frames are not responsive and harm usability.</li>
+                            <li>They break browser history and bookmarking.</li>
+                            <li>Alternative : Use modern CSS techniques like Flexbox or Grid for layout designs.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <strong>Floating in HTML (CSS Float Property)</strong>
+                <p>The float property in CSS allows elements to be positioned to the left or right within their
+                    container, allowing other content to wrap around it.</p><br>
+                <p>Example of Floating :</p><br>
+                <i>
+                    <style>
+                        .box {
+                            width: 200px;
+                            height: 100px;
+                            margin: 10px;
+                            padding: 10px;
+                            background-color: green;
+                        }
+
+                        .leftbox {
+                            float: left;
+                        }
+
+                        .rightbox {
+                            float: right;
+                        }
+
+                        .clear {
+                            clear: both;
+                        }
+                    </style>
+
+                    <body>
+                        <h1>Float Example</h1>
+                        <div class="box leftbox">This box is floated to the left.</div>
+                        <div class="box rightbox">This box is floated to the right.</div>
+                        <div class="clear"></div>
+                        <p>Content flows normally after clearing the floats.</p>
+                    </body>
+                </i><br>
+                <p>Explanation :</p><br>
+                <ol class="padding-20">
+                    <li>Float Values :
+                        <ul>
+                            <li>left : Floats the element to the left.</li>
+                            <li>right : Floats the element to the right.</li>
+                            <li>none : Default; not float applied.</li>
+                        </ul>
+                    </li>
+                    <li>Clearing Floats :
+                        <ul>
+                            <li>Use clear : both; to prevent floating elements from affecting subswquent content.</li>
+                        </ul>
+                    </li>
+                </ol>
+                <strong>Why Avoid Frames and Use Floating Sparingly?</strong>
+                <ul>
+                    <li>Frames : Deprecated and replaced by modern layout tools like CSS Grid and Flexbox.</li>
+                    <li>Float : Often leads to tricky layouts and is now replaced by CSS Grid and Flexbox, which provide
+                        better control and responsiveness.</li>
+                </ul>
+                <hr>
+            </div>
+            <div id="3" class="topics">
+                <h2>HTML Form elements</h2>
+                <hr>
+                <p>An HTML form is a section of a webpage that allows users to input data and submit it to a server for
+                    processing. Forms are widely used for collecting data such as login credentials, search queries, and
+                    user feedback.</p><br>
+                <strong>Basic Syntax</strong><br>
+                <i>
+                    &emsp;&lt;form action="submit.php" method="POST"&gt;<br>
+                    &emsp;&emsp;&lt;!-- Input fields go here --&gt;<br>
+                    &emsp;&lt;/form&gt;<br>
+                </i>
+                <ul>
+                    <li>
+                        &lt;form&gt; : Defines the form.
+                        <ul>
+                            <li>action : Specifies where the form data should be sent.</li>
+                            <li>method : Specifies how the data should be sent (GET or POST).</li>
+                        </ul>
+                    </li>
+                </ul><br>
+                <strong>Example : A Simple Form</strong><br>
+                <i>
+                    &lt;!DOCTYPE html&gt;<br>
+                    &lt;html lang="en"&gt;<br>
+                    &lt;head&gt;<br>
+                    &emsp;&lt;meta charset="UTF-8"&gt;<br>
+                    &emsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+                    &emsp;&lt;title&gt;HTML Form Example&lt;/title&gt;<br>
+                    &lt;/head&gt;<br>
+                    &lt;body&gt;<br>
+                    &emsp;&lt;h1&gt;Simple HTML Form&lt;/h1&gt;<br>
+                    &emsp;&lt;form action="/submit" method="POST"&gt;<br>
+                    &emsp;&emsp;&lt;label for="name"&gt;Name:&lt;/label&gt;<br>
+                    &emsp;&emsp;&lt;input type="text" id="name" name="name" required&gt;<br>
+                    &emsp;&emsp;&lt;br&gt;<br>
+
+                    &emsp;&emsp;&lt;label for="email"&gt;Email:&lt;/label&gt;<br>
+                    &emsp;&emsp;&lt;input type="email" id="email" name="email" required&gt;<br>
+                    &emsp;&emsp;&lt;br&gt;<br>
+
+                    &emsp;&emsp;&lt;label for="password"&gt;Password:&lt;/label&gt;<br>
+                    &emsp;&emsp;&lt;input type="password" id="password" name="password" required&gt;<br>
+                    &emsp;&emsp;&lt;br&gt;<br>
+
+                    &emsp;&emsp;&lt;input type="submit" value="Submit"&gt;<br>
+                    &emsp;&lt;/form&gt;<br>
+                    &lt;/body&gt;<br>
+                    &lt;/html&gt;
+                </i><br><br>
+                <strong>Key Input Types</strong><br>
+                <ol class="padding-20">
+                    <li>Text Input :
+                        <br>&emsp;<i>&lt;input type="text" name="username" placeholder="Enter your name"&gt;</i>
+                    </li>
+                    <li>Password Input :
+                        <br>&emsp;<i>&lt;input type="password" name="password"&gt;</i>
+                    </li>
+                    <li>Email Input :
+                        <br>&emsp;<i>&lt;input type="email" name="email"&gt;</i>
+                    </li>
+                    <li>Radio Buttons :
+                        <br>&emsp;<i>&lt;input type="radio" name="gender" value="male"&gt;</i> Male
+                        <br>&emsp;<i>&lt;input type="radio" name="gender" value="female"&gt;</i> Female
+                    </li>
+                    <li>Checkboxes :
+                        <br>&emsp;<i>&lt;input type="checkbox" name="subscribe" value="yes&gt;</i> Subscribe to
+                        newsletter
+                    </li>
+                    <li>Dropdown (Select) :
+                        <br>&emsp;<i>&lt;select name="country"&gt;
+                            <br>&emsp;&emsp;&lt;option value="india"&gt;India&lt;/option&gt;
+                            <br>&emsp;&emsp;&lt;option value="usa"&gt;USA&lt;/option&gt;
+                            <br>&emsp;&lt;/select&gt;
+                        </i>
+                    </li>
+                    <li>Submit Button :
+                        <br>&emsp;<i>&lt;input type="submit" value="Submit"&gt;</i>
+                    </li>
+                </ol><br>
+                <strong>Form Validation</strong><br>
+                <p>You can add basic validation using HTML attributes :</p>
+                <ul>
+                    <li>required : Ensures the field must be filled out.</li>
+                    <li>maxlength and minlength : Restricts the length of input.</li>
+                    <li>pattern: Adds regex-based validation.</li>
+                </ul><br>
+                <strong>Styling Forms with CSS</strong><br>
+                <p>Here’s an example of a styled form :</p><br>
+                <i>
+                    &lt;!DOCTYPE html&gt;<br>
+                    &lt;html lang="en"&gt;<br>
+                    &lt;head&gt;<br>
+                    &emsp;&lt;meta charset="UTF-8"&gt;<br>
+                    &emsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+                    &emsp;&lt;title&gt;Styled Form&lt;/title&gt;<br>
+                    &emsp;&lt;style&gt;<br>
+                    &emsp;&emsp;form {<br>
+                    &emsp;&emsp;&emsp;width: 300px;<br>
+                    &emsp;&emsp;&emsp;margin: 20px auto;<br>
+                    &emsp;&emsp;&emsp;padding: 20px;<br>
+                    &emsp;&emsp;&emsp;border: 1px solid #ccc;<br>
+                    &emsp;&emsp;&emsp;border-radius: 5px;<br>
+                    &emsp;&emsp;}<br>
+                    &emsp;&emsp;label {<br>
+                    &emsp;&emsp;&emsp;display: block;<br>
+                    &emsp;&emsp;&emsp;margin-bottom: 5px;<br>
+                    &emsp;&emsp;}<br>
+                    &emsp;&emsp;input, select {<br>
+                    &emsp;&emsp;&emsp;width: 100%;<br>
+                    &emsp;&emsp;&emsp;padding: 8px;<br>
+                    &emsp;&emsp;&emsp;margin-bottom: 10px;<br>
+                    &emsp;&emsp;&emsp;border: 1px solid #ccc;<br>
+                    &emsp;&emsp;&emsp;border-radius: 4px;<br>
+                    &emsp;&emsp;}<br>
+                    &emsp;&emsp;input[type="submit"] {<br>
+                    &emsp;&emsp;&emsp;background-color: #007BFF;<br>
+                    &emsp;&emsp;&emsp;color: white;<br>
+                    &emsp;&emsp;&emsp;cursor: pointer;<br>
+                    &emsp;&emsp;&emsp;border: none;<br>
+                    &emsp;&emsp;}<br>
+                    &emsp;&emsp;&emsp;input[type="submit"]:hover {<br>
+                    &emsp;&emsp;&emsp;background-color: #0056b3;<br>
+                    &emsp;&emsp;}<br>
+                    &emsp;&lt;/style&gt;<br>
+                    &lt;/head&gt;<br>
+                    &lt;body&gt;<br>
+                    &emsp;&lt;h1&gt;Styled HTML Form&lt;/h1&gt;<br>
+                    &emsp;&lt;form action="/submit" method="POST"&gt;<br>
+                    &emsp;&emsp;&lt;label for="name"&gt;Name:&lt;/label&gt;<br>
+                    &emsp;&emsp;&lt;input type="text" id="name" name="name" required&gt;<br>
+                    &emsp;&emsp;<br>
+                    &emsp;&emsp;&lt;label for="email"&gt;Email:&lt;/label&gt;<br>
+                    &emsp;&emsp;&lt;input type="email" id="email" name="email" required&gt;<br>
+                    <br>
+                    &emsp;&emsp;&lt;label for="country"&gt;Country:&lt;/label&gt;<br>
+                    &emsp;&emsp;&lt;select id="country" name="country"&gt;<br>
+                    &emsp;&emsp;&emsp;&lt;option value="india"&gt;India&lt;/option&gt;<br>
+                    &emsp;&emsp;&emsp;&lt;option value="usa"&gt;USA&lt;/option&gt;<br>
+                    &emsp;&emsp;&lt;/select&gt;<br>
+                    <br>
+                    &emsp;&emsp;&lt;input type="submit" value="Submit"&gt;<br>
+                    &emsp;&lt;/form&gt;<br>
+                    &lt;/body&gt;<br>
+                    &lt;/html&gt;<br>
+
+                </i>
+                <hr>
+            </div>
+        </div>
+    </div>
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/utility.css">
+    <style>
+        @font-face {
+            font-family: myFont;
+            src: url("fonts/Oxlaide.otf") format("opentype");
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        hr {
+            width: 100%;
+        }
+
+        footer {
+            color: white;
+            background: #1b093f url("/images/footer-pattern.png") center top repeat;
+            padding: 50px 100px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .contact-us-logo-image {
+            height: 50px;
+            background-color: #33A9DF;
+            padding: 0px 2px;
+            border-radius: 10px;
+        }
+
+        .contact-us-logo-text {
+            font-size: 40px;
+            font-family: 'myFont', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .contact-us{
+            width: 300px;
+        }
+        .footer-1st-part{
+            width: 100%;
+            justify-content: space-between;
+        }
+        @media screen and (max-width: 900px){
+            footer{
+                padding: 20px 50px;
+            }
+            .footer-1st-part{
+                flex-wrap: wrap;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <footer>
+        <div class="footer-1st-part flex gap-20">
+            <div class="contact-us flex gap-10 flex-column">
+                <a href="/index.html">
+                    <div class="contact-us-logo flex gap-10">
+                        <img class="contact-us-logo-image" src="/images/logo.svg">
+                        <div class="contact-us-logo-text">Study Nest</div>
+                    </div>
+                </a>
+                <div class="contact-us-types flex gap-10 flex-column">
+                    <div class="contact-us-location contact-us-mode flex gap-10">
+                        <img src="/images/location.svg">
+                        <div class="contact-us-location-text"><a
+                                href="https://www.google.co.in/maps/place/Nutan+Nagar+Colony,+Hazaribagh,+Jharkhand+825303/@23.9947673,85.3833188,15z/data=!3m1!4b1!4m6!3m5!1s0x39f49c6210d0ad1f:0x1e7613d44dde90e9!8m2!3d23.9947282!4d85.3936958!16s%2Fg%2F1hhwjb3t8?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw%3D%3D"
+                                target="_blank">825301, Nutan Nagar Hazaribag, Jharkhand India</a></div>
+                    </div>
+                    <div class="contact-us-call contact-us-mode flex gap-10">
+                        <img src="/images/call.svg">
+                        <div class="contact-us-call-text"><a href="tel:+91 7857 8836 54">+91 7857 8836 54</a></div>
+                    </div>
+                    <div class="contact-us-email contact-us-mode flex gap-10">
+                        <img src="/images/mail.svg">
+                        <div class="contact-us-email-text"><a
+                                href="mailto:studynestbysonu@gmail.com">studynestbysonu@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="our-product about-rentcars-web flex-column flex gap-10">
+                <div class="top-text"><b>Our Product</b></div>
+                <div class="sub-texts">
+                    <div class="sub-text-1">Rentcars</div>
+                    <div class="sub-text-2">Netflix clone</div>
+                    <div class="sub-text-3">Spotify Clone</div>
+                    <div class="sub-text-4">Hunger home</div>
+                    <div class="sub-text-5">Bachelor homes</div>
+                </div>
+            </div>
+            <div class="resources about-rentcars-web flex-column flex gap-10">
+                <div class="top-text"><b>Resources</b></div>
+                <div class="sub-texts">
+                    <div class="sub-text-1">Download</div>
+                    <div class="sub-text-2">Help Centre</div>
+                    <div class="sub-text-3">Guides</div>
+                    <div class="sub-text-5">Cruises</div>
+                    <div class="sub-text-6">Developer</div>
+                </div>
+            </div>
+            <div class="about-rentcars about-rentcars-web flex-column flex gap-10">
+                <div class="top-text"><b>About Study Nest</b></div>
+                <div class="sub-texts">
+                    <div class="sub-text-1">Why choose us</div>
+                    <div class="sub-text-2">Our Story</div>
+                    <div class="sub-text-3">Investor Relations</div>
+                    <div class="sub-text-4">Press Center</div>
+                    <div class="sub-text-5">Advertise</div>
+                </div>
+            </div>
+            <div class="social-media about-rentcars-web flex-column flex gap-10">
+                <div class="top-text"><b>Follow Us</b></div>
+                <div class="sub-texts follow-us-logos flex gap-10">
+                    <div class="sub-text-1"><img src="/images/fb.svg"></div>
+                    <div class="sub-text-2"><img src="/images/insta.svg"></div>
+                    <div class="sub-text-3"><img src="/images/yt.svg"></div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="copyright-text">Copyright &copy; 2024 ・ Rentcars, All Rights Reserved ・ Study Nest</div>
+    </footer>
+</body>
+
+</html>
+    <script src="script.js"></script>
+</body>
+
+</html>

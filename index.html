@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Nest - Best for BCA study material</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="stylesheet" href="css/utility.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: black;
+            color: white;
+        }
+
+        .container {
+            margin: 50px auto;
+            background-color: #1b093f;
+            width: 90%;
+            box-sizing: border-box;
+            border-radius: 25px;
+            flex-direction: column;
+            align-items: center;
+            padding: 5% 10px;
+        }
+
+        .cards {
+            flex-wrap: wrap;
+        }
+
+        .unit-card {
+            cursor: pointer;
+            width: 380px;
+            padding: 15px;
+            background-color: #2e106a;
+            background-image: linear-gradient(130deg, #5a1fd0 10%, rgba(46, 16, 106, 0) 70%);
+            background-position: 50% 50%;
+            transition: background-position .1s ease-in-out;
+            background-size: 300% 300%;
+            border: 1px solid #7b61ff;
+            border-radius: 15px;
+            box-sizing: border-box;
+            margin: 10px 0;
+            gap: 20px;
+        }
+
+        .unit-card img {
+            height: 71px;
+        }
+
+        .unit-card:hover {
+            border: 2px solid #7b61ff;
+            background-color: #40129e;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        @media screen and (max-width: 450px) {
+            .unit-card {
+                width: 300px;
+                padding: 10px;
+            }
+            h1{
+                font-size: 27px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/utility.css">
+    <style>
+        @font-face {
+            font-family: myFont;
+            src: url("fonts/Oxlaide.otf") format("opentype");
+        }
+
+        .navbar {
+            color: white;
+            font-family: "Poppins", sans-serif;
+            position: sticky;
+            top: 0;
+            height: 65px;
+            background-color: rgba(255, 255, 255, 0.062);
+            backdrop-filter: blur(10px);
+            padding: 0 100px;
+        }
+
+        .logo {
+            cursor: pointer;
+            font-size: 40px;
+            font-family: 'myFont', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            height: 55px;
+            background-color: #33A9DF;
+            padding: 0px 2px;
+            border-radius: 10px;
+        }
+
+        input {
+            position: relative;
+            border-radius: 8px;
+            padding: 0 5px 0 35px;
+            height: 40px;
+            width: 25vw;
+            font-size: 20px;
+            font-weight: 500;
+            color: #1A4261;
+            background-image: url("images/search.svg");
+            background-repeat: no-repeat;
+            background-position: 7px center;
+            border: none;
+        }
+
+        input:focus {
+            outline: none;
+            border: 2px solid #33A9DF;
+        }
+
+        button {
+            color: white;
+            cursor: pointer;
+            outline: none;
+            border: none;
+            background-color: transparent;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        button:hover {
+            color: #33A9DF;
+        }
+
+        .login-signup {
+            gap: 10px;
+        }
+
+        .log-in {
+            background-color: #38bdf833;
+            color: #33A9DF;
+            padding: 8px 10px;
+            border-radius: 8px;
+        }
+
+        .log-in:hover {
+            background-color: #1A4261;
+            transition: all 0.3s ease-in-out;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        @media screen and (max-width: 900px) {
+            .navbar {
+                padding: 0 30px;
+            }
+
+            .logo {
+                font-size: 30px;
+            }
+
+            .logo img {
+                height: 45px;
+                padding: 0px 1.5px;
+            }
+
+            input {
+                padding: 0 5px 0 30px;
+                height: 32px;
+                width: 90px;
+                font-size: 15px;
+                background-size: 20px;
+            }
+
+            button {
+                font-size: 17px;
+            }
+
+            .log-in {
+                padding: 6px 7px;
+                border-radius: 8px;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            .navbar {
+                height: 55px;
+                padding: 0 20px;
+            }
+
+            .logo {
+                font-size: 25px;
+            }
+
+            .logo img {
+                height: 35px;
+                padding: 0px 1px;
+            }
+
+            input {
+                width: 55px;
+                height: 28px;
+            }
+
+            button {
+                font-size: 13px;
+            }
+
+            .log-in {
+                padding: 4px 5px;
+            }
+
+            .login-signup {
+                gap: 3px;
+            }
+        }
+
+        @media screen and (max-width: 375px) {
+            .navbar {
+                padding: 0 10px;
+            }
+
+            .logo p {
+                line-height: 20px;
+            }
+
+            button {
+                font-size: 11px;
+            }
+
+            input {
+                width: 48px;
+                padding: 0 2px 0 20px;
+                background-position: 2px center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar flex item-center space-between">
+        <a href="/index.html">
+            <div class="logo">
+                <img src="images/logo.svg" alt="Logo img">
+                <p>Study Nest</p>
+            </div>
+        </a>
+        <div class="searchbox">
+            <input type="text" placeholder="Search...">
+        </div>
+        <div class="login-signup flex center">
+            <button class="sign-up">Sign up</button>
+            <button class="log-in">Log in</button>
+        </div>
+    </div>
+</body>
+
+</html>
+    <div class="container flex">
+        <div class="flex justify-center">
+            <h1>HTML (BCA C4003)</h1>
+        </div>
+        <div class="cards flex justify-center" style="gap: 20px;">
+
+            <a href="unit-1.html">
+                <div class="unit-card flex">
+                    <div class="img-part">
+                        <img src="images/unit-1.svg" alt="unit 1">
+                    </div>
+                    <div class="text-part">
+                        <h2>UNIT 1</h2>
+                        <p>Introduction to HTML & Tags</p>
+                    </div>
+                </div>
+            </a>
+            <a href="unit-2.html">
+                <div class="unit-card flex">
+                    <div class="img-part">
+                        <img src="images/unit-2.svg" alt="unit 1">
+                    </div>
+                    <div class="text-part">
+                        <h2>UNIT 2</h2>
+                        <p>Advanced HTML</p>
+                    </div>
+                </div>
+            </a>
+            <a href="unit-3.html">
+                <div class="unit-card flex">
+                    <div class="img-part">
+                        <img src="images/unit-3.svg" alt="unit 1">
+                    </div>
+                    <div class="text-part">
+                        <h2>UNIT 3</h2>
+                        <p>CSS (Cascading Style Sheet)</p>
+                    </div>
+                </div>
+            </a>
+            <a href="unit-4.html">
+                <div class="unit-card flex">
+                    <div class="img-part">
+                        <img src="images/unit-4.svg" alt="unit 1">
+                    </div>
+                    <div class="text-part">
+                        <h2>UNIT 4</h2>
+                        <p>Data Access & Error Handling</p>
+                    </div>
+                </div>
+            </a>
+            <a href="unit-5.html">
+                <div class="unit-card flex">
+                    <div class="img-part">
+                        <img src="images/unit-5.svg" alt="unit 1">
+                    </div>
+                    <div class="text-part">
+                        <h2>UNIT 5</h2>
+                        <p>HTML Graphics and HTML Media</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/utility.css">
+    <style>
+        @font-face {
+            font-family: myFont;
+            src: url("fonts/Oxlaide.otf") format("opentype");
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        hr {
+            width: 100%;
+        }
+
+        footer {
+            color: white;
+            background: #1b093f url("/images/footer-pattern.png") center top repeat;
+            padding: 50px 100px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .contact-us-logo-image {
+            height: 50px;
+            background-color: #33A9DF;
+            padding: 0px 2px;
+            border-radius: 10px;
+        }
+
+        .contact-us-logo-text {
+            font-size: 40px;
+            font-family: 'myFont', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .contact-us{
+            width: 300px;
+        }
+        .footer-1st-part{
+            width: 100%;
+            justify-content: space-between;
+        }
+        @media screen and (max-width: 900px){
+            footer{
+                padding: 20px 50px;
+            }
+            .footer-1st-part{
+                flex-wrap: wrap;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <footer>
+        <div class="footer-1st-part flex gap-20">
+            <div class="contact-us flex gap-10 flex-column">
+                <a href="/index.html">
+                    <div class="contact-us-logo flex gap-10">
+                        <img class="contact-us-logo-image" src="/images/logo.svg">
+                        <div class="contact-us-logo-text">Study Nest</div>
+                    </div>
+                </a>
+                <div class="contact-us-types flex gap-10 flex-column">
+                    <div class="contact-us-location contact-us-mode flex gap-10">
+                        <img src="/images/location.svg">
+                        <div class="contact-us-location-text"><a
+                                href="https://www.google.co.in/maps/place/Nutan+Nagar+Colony,+Hazaribagh,+Jharkhand+825303/@23.9947673,85.3833188,15z/data=!3m1!4b1!4m6!3m5!1s0x39f49c6210d0ad1f:0x1e7613d44dde90e9!8m2!3d23.9947282!4d85.3936958!16s%2Fg%2F1hhwjb3t8?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw%3D%3D"
+                                target="_blank">825301, Nutan Nagar Hazaribag, Jharkhand India</a></div>
+                    </div>
+                    <div class="contact-us-call contact-us-mode flex gap-10">
+                        <img src="/images/call.svg">
+                        <div class="contact-us-call-text"><a href="tel:+91 7857 8836 54">+91 7857 8836 54</a></div>
+                    </div>
+                    <div class="contact-us-email contact-us-mode flex gap-10">
+                        <img src="/images/mail.svg">
+                        <div class="contact-us-email-text"><a
+                                href="mailto:studynestbysonu@gmail.com">studynestbysonu@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="our-product about-rentcars-web flex-column flex gap-10">
+                <div class="top-text"><b>Our Product</b></div>
+                <div class="sub-texts">
+                    <div class="sub-text-1">Rentcars</div>
+                    <div class="sub-text-2">Netflix clone</div>
+                    <div class="sub-text-3">Spotify Clone</div>
+                    <div class="sub-text-4">Hunger home</div>
+                    <div class="sub-text-5">Bachelor homes</div>
+                </div>
+            </div>
+            <div class="resources about-rentcars-web flex-column flex gap-10">
+                <div class="top-text"><b>Resources</b></div>
+                <div class="sub-texts">
+                    <div class="sub-text-1">Download</div>
+                    <div class="sub-text-2">Help Centre</div>
+                    <div class="sub-text-3">Guides</div>
+                    <div class="sub-text-5">Cruises</div>
+                    <div class="sub-text-6">Developer</div>
+                </div>
+            </div>
+            <div class="about-rentcars about-rentcars-web flex-column flex gap-10">
+                <div class="top-text"><b>About Study Nest</b></div>
+                <div class="sub-texts">
+                    <div class="sub-text-1">Why choose us</div>
+                    <div class="sub-text-2">Our Story</div>
+                    <div class="sub-text-3">Investor Relations</div>
+                    <div class="sub-text-4">Press Center</div>
+                    <div class="sub-text-5">Advertise</div>
+                </div>
+            </div>
+            <div class="social-media about-rentcars-web flex-column flex gap-10">
+                <div class="top-text"><b>Follow Us</b></div>
+                <div class="sub-texts follow-us-logos flex gap-10">
+                    <div class="sub-text-1"><img src="/images/fb.svg"></div>
+                    <div class="sub-text-2"><img src="/images/insta.svg"></div>
+                    <div class="sub-text-3"><img src="/images/yt.svg"></div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="copyright-text">Copyright &copy; 2024 ・ Rentcars, All Rights Reserved ・ Study Nest</div>
+    </footer>
+</body>
+
+</html>
+</body>
+
+</html>
