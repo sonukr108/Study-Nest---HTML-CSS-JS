@@ -873,7 +873,7 @@
                             <li><b>Example:</b>
                                 <br>
                                 <i>localStorage.setItem('theme', 'dark');</i><br>
-                                <i>console.log(localStorage.getItem('theme'));</i><br>
+                                <i>console.log(localStorage.<br/>getItem('theme'));</i><br>
                             </li>
                         </ul>
                     </li>
@@ -886,7 +886,7 @@
                                 session.</li>
                             <li><b>Example:</b>
                                 <br>
-                                <i>sessionStorage.setItem('cartItems', '5');</i><br>
+                                <i>sessionStorage.setItem('cartItems','5');</i><br>
                             </li>
                         </ul>
                     </li>
@@ -1090,7 +1090,7 @@
                             <li>
                                 <strong>Example using PDO:</strong><br>
                                 <i>try {</i><br>
-                                <i> $conn = new PDO("mysql:host=localhost;dbname=example_db", $username,
+                                <i> $conn = new PDO("mysql:host=localhost;<br/>dbname=example_db", $username,
                                     $password);</i><br>
                                 <i> $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);</i><br><br>
                                 <i> // Prepared Statement</i><br>
@@ -1505,8 +1505,7 @@
                                 <i>&nbsp;&nbsp;$imageFileType = strtolower(pathinfo($target_file,
                                     PATHINFO_EXTENSION));</i><br>
                                 <i>&nbsp;&nbsp;if (in_array($imageFileType, ["jpg", "png", "jpeg"])) {</i><br>
-                                <i>&nbsp;&nbsp;&nbsp;&nbsp;if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"],
-                                    $target_file)) {</i><br>
+                                <i>&nbsp;&nbsp;&nbsp;&nbsp;if (move_uploaded_file($_FILES<br/>["fileToUpload"]["tmp_name"],$target_file)) {</i><br>
                                 <i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "The file " .
                                     basename($_FILES["fileToUpload"]["name"]) . " has been uploaded.";</i><br>
                                 <i>&nbsp;&nbsp;&nbsp;&nbsp;} else {</i><br>
@@ -2062,7 +2061,7 @@
                                         &nbsp;&nbsp;&nbsp;&nbsp;echo "Fatal error: " . $error['message'];<br>
                                         &nbsp;&nbsp;}<br>
                                         }<br><br>
-                                        register_shutdown_function('shutdownFunction');</i>
+                                        register_shutdown_function<br/>('shutdownFunction');</i>
                                 </ul>
                             </li>
                         </ul>
